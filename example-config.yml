@@ -1,0 +1,11 @@
+live:
+  password: shp_13123...60397f
+  theme_id: "163175792919"
+  store: store.myshopify.com
+  timeout: 90s
+
+dev:
+  password: shp_13123...60397f
+  theme_id: "163175825687"
+  store: store.myshopify.com
+  timeout: 90s
