@@ -1,0 +1,37 @@
+{
+  "name": "base-theme_shopify",
+  "version": "1.0.0",
+  "description": "Introducing Shopify Base Theme: A sophisticated foundation for stores, elevating e-commerce with meticulous design. A versatile cornerstone for projects, it ensures seamless integration, sleek aesthetics, and robust functionality. Streamline development, unlock endless possibilities with our Shopify Base Theme.",
+  "main": "index.js",
+  "scripts": {
+    "dev:webpack": "NODE_ENV='development' webpack",
+    "build:webpack": "NODE_ENV='production' webpack",
+    "dev:tailwind": "NODE_ENV='development' postcss zrc/styles/styles.css -o assets/styles.min.css --watch --verbose",
+    "build:tailwind": "NODE_ENV='production' postcss zrc/styles/styles.css -o assets/styles.min.css",
+    "build": "npm run build:webpack && npm run build:tailwind && theme -e live deploy",
+    "dev": "concurrently \"npm run dev:webpack\" \"npm run dev:tailwind\" \"theme -e dev watch\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenooz/base-theme_shopify.git"
+  },
+  "author": "rubenooz",
+  "bugs": {
+    "url": "https://github.com/rubenooz/base-theme_shopify/issues"
+  },
+  "homepage": "https://github.com/rubenooz/base-theme_shopify#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "cssnano": "^6.0.1",
+    "javascript-obfuscator": "^4.1.0",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^12.0.1",
+    "tailwindcss": "^3.3.6",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-obfuscator": "^3.5.1"
+  }
+}
